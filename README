@@ -17,7 +17,7 @@ PROGRAM DESIGN
       Graph<Type> graph(DIRECTED); // DIRECTED and UNWEIGHTED
       Graph<Type> graph(WEIGHTED); // UNDIRECTED and WEIGHTED
       Graph<Type> graph; // UNDIRECTED and UNWEIGHTED 
-      etc, Just pass your wishd graph type in the array and the program will do the rest.
+      etc, Just pass your wished graph type in the array and the program will do the rest.
       
       Type referes to a Type of an object.
       
@@ -43,46 +43,18 @@ PROGRAM OUTPUT
    valid Array object computations created by the user in the main function.
    expression.
    
-FILE INDEX
-        file               function(s)        					description
-        --------------     -----------------  					-----------------------------------
-	Graph.h		    Graph()						the default constructor.
-			    Graph(Direction, Weight)				the overloaded constructor with direction and weight
-			    Graph(Weight, Direction)
-			    Graph(Direction)					the overloaded constructor with direction
-			    Graph(Weight)					the overloaded constructor with weight
-			    Graph& operator=(const Graph<Type>& arg)		overloading the assignment operator
-			    ~Graph()						destructor
-			    void destroy()					destroys the object when it goes out of scope
-			    bool isEmpty() 					checks if the graph is empty
-			    bool isFull()					checks is the graph is full
-			    bool isAdjacentTo(fromVertex,toVertex)		checks if theres is an edge between two vertices
-			    int edgeWeight(fromVertex,toVertex)		returns the weight of the edge between 2 vertices
-			    int edgeCount() const				returns the number of edges in the graph
-			    int vertexCount() const				returns the number of vertices in the graph
-			    void insertVertex(Vertex)				inserts a vertex in the graph
-			    void insertEdge(fromVertex,toVertex, int weight=1) inserts an edge between 2 vertices
-			    void deleteEdge(fromVertex,toVertex);		deletes an edge between 2 vertices
-			    void deleteVertex(Vertex)				deletes a vertex
-			    int findVertex(Vertex) const			finds the position  of the vertex in the graph	
-			    void dump() const;					prints the whole graph												
-      ---------------------------------------------------------------------------------------------------
-
-      main.cpp                  main              calls all other functions.
-
-      makefile                                    builds an executable.
-  
-  
 PROGRAM TESTING
    The program was tested with several Graph objects created in the main class.
 
    1. Creating Graph objects - passed
-	cities object was created and various vertices were passed to it. edges were created.
-	cities was also tested in different graph types, including, directed, undirected, weighted,
-	 and unweighted graphs.
+      	City objects were created and various vertices were assigned to them. Graph edges between
+      	different cities were created.City objects were also tested in different graph types, including, 
+      	directed, undirected, weighted, and unweighted graphs.
 
    2. Different types - passed
 	Different graphs of different types were created to test templated type and successfully passed.
+	Eg. integer, float. etc.
+	A City class is included in this package for testing.
 
    3. Assignment operator -  passed
 	The assignment operator was tested by assigning a new Graph object the contents of an existing Graph
@@ -91,6 +63,6 @@ PROGRAM TESTING
 BUGS
 	No known bugs lately.
 
-	Any errors should apart from the ones reported above shoul be reported to:
+	Any errors should apart from the ones reported above should be reported to:
 	tandasima@mnstate.edu
 
